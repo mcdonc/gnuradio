@@ -321,7 +321,7 @@ class GenericHeaderParser(BlockTool):
                 compiler='gcc',
                 undefine_symbols=['__PIE__'],
                 define_symbols=self.define_symbols,
-                cflags='-std=c++17 -fPIC')
+                cflags='-std=c++17 -fPIC -fsized-deallocation')
             decls = parser.parse(
                 [self.target_file], xml_generator_config,
                 compilation_mode=parser.COMPILATION_MODE.ALL_AT_ONCE)
